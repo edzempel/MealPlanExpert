@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.TextField;
@@ -35,10 +36,12 @@ not out of scope for the embedded classes
         primaryStage.setTitle("Meal Plan Expert");
 
         //Declare and instantiate instance profile pane items
-        profileName = new TextField("profile name");
+        Label profileNameLabel = new Label("Name:");
+        profileName = new TextField("name");
 
         // populate the profile pane
         profilePane = new VBox();
+        profilePane.getChildren().add(profileNameLabel);
         profilePane.getChildren().add(profileName);
 
         // instantiate the profile scene with the pane and dimensions
